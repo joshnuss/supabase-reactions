@@ -10,7 +10,6 @@
 </script>
 
 <div class="text-gray-600 text-xl flex flex-col items-center justify-center h-screen text-center">
-  test7
   <img src="/logo.svg" class="animate-bounce h-64 pointer-events-none my-10" alt="logo" />
   <p class="my-1">Edit <code class="bg-gray-200 p-1">src/App.svelte</code> and save to reload.</p>
   <p class="my-1">Page has been open for <code class="bg-gray-200 p-1">{count}</code> seconds.</p>
