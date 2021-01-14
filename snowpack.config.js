@@ -16,21 +16,15 @@ module.exports = {
       entrypoints: 'build/_dist_/index.js'
     }]
   ],
-  install: [
-    /* ... */
-  ],
-  installOptions: {
-    /* ... */
-  },
   devOptions: {
     output: 'stream'
   },
   buildOptions: {
     /* ... */
   },
-  proxy: {
+  routes: [
     /* ... */
-  },
+  ],
   alias: {
     '@': './src'
   },
