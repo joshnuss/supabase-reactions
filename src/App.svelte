@@ -3,20 +3,20 @@
 </script>
 
 <div class="my-10 mx-5 sm:mx-10 md:mx-auto md:w-1/2 text-gray-600 flex flex-col h-screen gap-4">
-  <h1 class="text-4xl font-medium">Realtime emoji reactions with Supabase</h1>
+  <h1 class="text-4xl font-medium">Emoji Reaction Button with Supabase</h1>
 
-  <p class="text-sm text-gray-500">Jan 1, 2021 &bull; 1min read &bull; by <a class="underline" href="https://twitter.com/joshnuss">@joshnuss</a></p>
+  <p class="text-sm text-gray-500">Jan 13, 2021 &bull; 1min read &bull; by <a class="underline" href="https://twitter.com/joshnuss">@joshnuss</a></p>
 
-  <p class="mt-10">This is an example of using supabase to create a realtime reaction widget like the one at the <a href="#bottom" class="underline">bottom of the article</a>.</p>
-  <p>When you click the reaction button, a record is inserted into the remote db. The record is keyed by user_id, scope, and emoji.</p>
+  <p class="mt-10">This is an example of using <a class="underline" href="https://supabase.io">supabase</a> to create a realtime reaction button like the one <a href="#bottom" class="underline">below the article</a>.</p>
+  <p>When the button is clicked, the user will be redirected to authenticate via OAUTH. If they've already authenticaed, then a record is inserted into the subapase DB.</p>
 
-  <p>The code looks like this:</p>
+  <p>The client code looks like this:</p>
 
   <pre class="bg-gray-200 p-3 rounded-sm">
     &lt;Reaction emoji='❤' scope={'{'}window.location.pathname{'}'}/&gt;
   </pre>
 
-  Or you can use a custom SVG:
+  <p>It also supports <a class="underline" href="https://openmoji.org/">custom SVGs</a>:</p>
 
   <pre class="bg-gray-200 p-3 rounded-sm">
     &lt;Reaction scope={'{'}window.location.pathname{'}'}&gt;
@@ -24,9 +24,9 @@
 &lt;/Reaction&gt;
   </pre>
 
-  <p>The scope is any unique value. For example if you want to add reaction to a comment, you can use "comment:&lt;comment-id&gt;", any string will work.</p>
+  <p>Each record is keyed by user_id, scope, and emoji. The scope is any unique string. For example if you want to add a reaction to a comment, you could use <code class="bg-gray-200 p-1">scope="comment:&lt;comment-id&gt;"</code>.</p>
 
-  <p>When a user clicks the reaction button, they are redirected to authenticate via OAUTH.</p>
+  <p>You can find the <a class="underline" href="https://github.com/joshnuss/supabase-reactions">full code here</a>.</p>
 
   <div id="bottom" class="flex gap-2 my-4">
     <Reaction let:selected>
